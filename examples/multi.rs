@@ -8,7 +8,7 @@ use rand::Rng;
 fn main() {
     let m = MultiProgress::new();
     let sty = ProgressStyle::with_template(
-        "[{elapsed_precise}] {bar:30.cyan/blue} {pos:>7}/{len:7} {msg}",
+        "[{elapsed_precise}] {bar:40.cyan/blue} {pos:>7}/{len:7} {msg}",
     )
     .unwrap()
     .progress_chars("■■□");

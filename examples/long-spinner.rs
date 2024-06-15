@@ -35,5 +35,6 @@ fn main() {
     );
     pb.set_message("Calculating...");
     thread::sleep(Duration::from_secs(5));
+    
     pb.finish_with_message("Done");
 }
