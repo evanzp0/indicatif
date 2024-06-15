@@ -8,10 +8,10 @@ use rand::Rng;
 fn main() {
     let m = MultiProgress::new();
     let sty = ProgressStyle::with_template(
-        "[{elapsed_precise}] {bar:40.cyan/blue} {pos:>7}/{len:7} {msg}",
+        "[{elapsed_precise}] {bar:30.cyan/blue} {pos:>7}/{len:7} {msg}",
     )
     .unwrap()
-    .progress_chars("##-");
+    .progress_chars("■■□");
 
     let n = 200;
     let pb = m.add(ProgressBar::new(n));
@@ -63,5 +63,5 @@ fn main() {
     }
     let _ = h3.join();
     pb2.finish_with_message("all jobs done");
-    m.clear().unwrap();
+    // m.clear().unwrap();
 }
